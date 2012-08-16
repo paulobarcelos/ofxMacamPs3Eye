@@ -2,24 +2,33 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-	//cam.listDevices();
-	cam.setDeviceID(2);
-	cam.setDesiredFrameRate(180);
-	cam.initGrabber(320, 240);
+	ofSetVerticalSync(true);
 	
-	cam1.setDeviceID(3);
-	cam1.setDesiredFrameRate(60);
-	cam1.initGrabber(640, 480);
+	cam1.setDeviceID(2);
+	cam1.setDesiredFrameRate(180);
+	cam1.initGrabber(320, 240);
+	
+	cam2.setDeviceID(3);
+	cam2.setDesiredFrameRate(180);
+	cam2.initGrabber(320, 240);
+	
+	cam3.setDeviceID(4);
+	cam3.setDesiredFrameRate(180);
+	cam3.initGrabber(320, 240);	
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-
+	cam1.update();
+	cam2.update();
+	cam3.update();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-
+	cam1.draw(0, 0);
+	cam2.draw(320, 0);
+	cam3.draw(640, 0);
 }
 
 //--------------------------------------------------------------

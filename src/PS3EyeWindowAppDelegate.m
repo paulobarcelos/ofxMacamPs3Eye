@@ -197,7 +197,7 @@
 {
 	frameNew = true;
 	if (cam!=driver) return;	//probably an old one
-	[imageView display];
+	//[imageView display];
 	[driver setImageBuffer:[driver imageBuffer] bpp:[driver imageBufferBPP] rowBytes:[driver imageBufferRowBytes]];
 }
 

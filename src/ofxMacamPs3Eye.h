@@ -51,6 +51,10 @@ protected:
 	int desiredFPS;
 	bool inited;
 	
-	void* ps3eye;
+	bool bUseTex;
+	ofTexture tex;
 	
+	void* ps3eye;
+	ofPixels pixels;
+		
 };
