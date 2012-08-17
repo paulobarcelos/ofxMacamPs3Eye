@@ -1,68 +1,78 @@
 #include "testApp.h"
 
+
 //--------------------------------------------------------------
 void testApp::setup(){
-	ofSetVerticalSync(true);
+	//ofSetVerticalSync(true);
 	
-	ofSetLogLevel(OF_LOG_VERBOSE);	
+	camWidth = 640;
+	camHeight = 480;
 	
-	vector<ofxMacamPs3EyeDeviceInfo*> deviceList = ofxMacamPs3Eye::getDeviceList();
+	ps3eye.listDevices();
 	
-	for (int i = 0; i < deviceList.size(); i++) {
-		ofxMacamPs3Eye * camera = new ofxMacamPs3Eye();
-		camera->setDeviceID(deviceList[i]->id);
-		camera->setDesiredFrameRate(180);
-		camera->initGrabber(320, 240);
-		cameras.push_back(camera);
-	}
+	ps3eye.setDesiredFrameRate(60);
+	ps3eye.initGrabber(camWidth,camHeight);
 	
-	if(cameras.size() > 0){
-		ofSetWindowShape(320 * cameras.size(), 240);
-	}
+	ps3eye.setAutoGainAndShutter(false); // otherwise we can't set gain or shutter
+	ps3eye.setGain(0.5);
+	ps3eye.setShutter(1.0);
+	ps3eye.setGamma(0.5);
+	ps3eye.setBrightness(0.6);
+	ps3eye.setContrast(1.0);
+	ps3eye.setHue(0.0);
+	
+	ps3eye.setFlicker(1);
 }
+
 
 //--------------------------------------------------------------
 void testApp::update(){
-	for (int i = 0; i < cameras.size(); i++) {
-		cameras[i]->update();
-	}
 	
+	ps3eye.update();
+	
+	// Blink the led everytime there is a new frame
+	if(ps3eye.isFrameNew()){
+		ps3eye.setLed(true); 
+	}
+	else ps3eye.setLed(false); 
+
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	for (int i = 0; i < cameras.size(); i++) {
-		cameras[i]->draw(i * cameras[i]->getWidth(),0);
-	}
+	ofSetHexColor(0xffffff);
+	ps3eye.draw(20,20);
 	
-	if(cameras.size() == 0){
-		ofDrawBitmapString("No PS3Eye found. :(", 20, 20);
-	}
+	ofDrawBitmapString("Ps3Eye FPS: "+ ofToString(ps3eye.getRealFrameRate()), 20,15);
+}
+
+
+
+//--------------------------------------------------------------
+void testApp::keyPressed  (int key){ 	
+
+	
+		
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed(int key){
+void testApp::keyReleased(int key){ 
 	
 }
 
 //--------------------------------------------------------------
-void testApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y){
-
+void testApp::mouseMoved(int x, int y ){
+	
 }
 
 //--------------------------------------------------------------
 void testApp::mouseDragged(int x, int y, int button){
-
+	
 }
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-
+	
 }
 
 //--------------------------------------------------------------

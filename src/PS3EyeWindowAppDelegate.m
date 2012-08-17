@@ -2,7 +2,7 @@
 
 @implementation PS3EyeWindowAppDelegate
 
-@synthesize window, central, driver;
+@synthesize window, central, driver, realFps;
 
 -(id)init {
 	self = [super init];
@@ -129,9 +129,7 @@
 	//[[[central getCameras]objectAtIndex:[central indexOfCamera:driver]] setDriver:NULL];
 	[driver setCentral:NULL];
 	[driver shutdown];
-	[driver release];
-	
-	
+	[driver release];	
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification 
@@ -147,12 +145,25 @@
 {
 	frameNew = true;
 	if (cam!=driver) return;	//probably an old one
+
+	
+	timeval lastTime = currentTime;
+	timeval difference;
+	gettimeofday(&currentTime, NULL);
+	
+	timersub(&currentTime, &lastTime, &difference);
+    int diff = (int) (difference.tv_sec * 1000 + difference.tv_usec / 1000);
+
+	realFps = 1000.0 / (float)diff;
+	
 	//[imageView display];
 	[driver setImageBuffer:[driver imageBuffer] bpp:[driver imageBufferBPP] rowBytes:[driver imageBufferRowBytes]];
 }
 
 - (void) updateStatus:(NSString *)status fpsDisplay:(float)fpsDisplay fpsReceived:(float)fpsReceived
 {
+	NSLog(@"fps %f",fpsReceived);
+	
 	NSString * append;
 	NSString * newStatus;
 	

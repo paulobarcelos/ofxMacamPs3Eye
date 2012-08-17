@@ -7,7 +7,7 @@ ofxMacamPs3Eye::ofxMacamPs3Eye():
 ps3eye([[PS3EyeWindowAppDelegate alloc] init]),
 deviceID(-1),
 inited(false),
-desiredFPS(30),
+desiredFPS(180),
 bUseTex(true),
 frameIsNew(false),
 autoGainAndShutter(true),
@@ -39,11 +39,27 @@ vector<ofxMacamPs3EyeDeviceInfo*> ofxMacamPs3Eye::getDeviceList(bool verbose){
 	return deviceList;
 }
 void ofxMacamPs3Eye::setDeviceID(int _deviceID){
-	deviceID = _deviceID;
+	vector<ofxMacamPs3EyeDeviceInfo*> deviceList = getDeviceList(true);
+	bool idValid = false;
+	for (int i = 0; i < deviceList.size(); i++) {
+		if(_deviceID == deviceList[i]->id){
+			idValid = true;
+			break;
+		}
+	}
+	if (!idValid) {
+		deviceID = deviceList[0]->id;
+		ofLogWarning("ofxMacamPs3Eye:: DeviceID ("+ofToString(_deviceID)+") is invalid. Setting to the first valid id ("+ofToString(deviceID)+"). Be aware that this id can already be in use.");
+	}
+	else {
+		deviceID = _deviceID;
+	}
+
 	if(isInited) initGrabber(getWidth(), getHeight());
 }
 bool ofxMacamPs3Eye::initGrabber(int w, int h, bool defaultSettingsHack){
 	close();
+	if(deviceID == -1) setDeviceID(0);
 	
 	bool success = false;
 	if([ofxMacamPs3EyeCast(ps3eye) connectTo:(unsigned long) deviceID]){
@@ -135,6 +151,12 @@ void ofxMacamPs3Eye::draw(float x, float y, float w, float h){
 void ofxMacamPs3Eye::setDesiredFrameRate(int framerate){
 	desiredFPS = framerate;
 	if(isInited) initGrabber(getWidth(), getHeight());
+}
+int ofxMacamPs3Eye::getDesiredFrameRate(){
+	return desiredFPS;
+}
+float ofxMacamPs3Eye::getRealFrameRate(){
+	return [ofxMacamPs3EyeCast(ps3eye) realFps];
 }
 
 void ofxMacamPs3Eye::setAnchorPercent(float xPct, float yPct){

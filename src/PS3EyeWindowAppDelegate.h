@@ -9,6 +9,8 @@
 	MyCameraCentral* central;
 	MyCameraDriver* driver;
 	
+	timeval currentTime;
+	
 	BOOL cameraGrabbing;
 	CameraResolution cameraResolution;
 	int cameraWidth;
@@ -16,6 +18,8 @@
 	int cameraFPS;
 	
 	BOOL frameNew;
+	
+	float realFps;
 }
 - (BOOL)connectTo:(unsigned long)cid;
 - (void)useWidth:(int)w useHeight:(int)h useFps:(int)f;
@@ -34,6 +38,7 @@
 @property (readonly) NSWindow* window;
 @property (readonly) MyCameraCentral* central;
 @property (readonly) MyCameraDriver* driver;
+@property (readonly) float realFps;
 
 
 @end

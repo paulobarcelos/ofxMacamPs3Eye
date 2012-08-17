@@ -23,6 +23,9 @@ public:
 	
 	void setDeviceID(int _deviceID);
 	void setDesiredFrameRate(int framerate);
+	int getDesiredFrameRate();
+	
+	float getRealFrameRate();
 	
 	unsigned char * getPixels();
 	ofPixels & getPixelsRef();
