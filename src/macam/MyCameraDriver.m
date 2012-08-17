@@ -562,21 +562,21 @@
 //
 - (CameraResolution) findResolutionForWidth:(short)width height:(short)height 
 {
-    CameraResolution res;
+    int res;
     
-    for (res = ResolutionMax; res >= ResolutionMin; res--) 
+    for (res = (int)ResolutionMax; res >= (int)ResolutionMin; res--) 
     {
-        if ((WidthOfResolution(res) <= width) && (HeightOfResolution(res) <= height)) 
-            if ([self findFrameRateForResolution:res] >= 0) 
-                return res;
+        if ((WidthOfResolution((CameraResolution)res) <= width) && (HeightOfResolution((CameraResolution)res) <= height)) 
+            if ([self findFrameRateForResolution:(CameraResolution)res] >= 0) 
+                return (CameraResolution)res;
     }
     
     //  If there is no smaller resolution: Find the smallest availabe resolution
     
-    for (res = ResolutionMin; res <= ResolutionMax; res++) 
+    for (res = (int)ResolutionMin; res <= (int)ResolutionMax; res++) 
     {
-        if ([self findFrameRateForResolution:res] >= 0) 
-            return res;
+        if ([self findFrameRateForResolution:(CameraResolution)res] >= 0) 
+            return (CameraResolution)res;
     }
     
 #ifdef VERBOSE

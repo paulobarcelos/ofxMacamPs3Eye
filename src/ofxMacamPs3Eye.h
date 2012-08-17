@@ -4,13 +4,20 @@
 
 #define ofxMacamPs3EyeCast(x) ((PS3EyeWindowAppDelegate*)x)
 
+struct ofxMacamPs3EyeDeviceInfo{
+	int id;
+	char name[255];
+};
+
 class ofxMacamPs3Eye : public ofBaseVideoGrabber, public ofBaseVideoDraws {
 public:
 	ofxMacamPs3Eye();
 	~ofxMacamPs3Eye();
 	
-	void listDevices();		
-	bool initGrabber(int w, int h);
+	void listDevices(){getDeviceList(true);};	
+	static vector<ofxMacamPs3EyeDeviceInfo*> getDeviceList(bool verbose = true);
+	bool initGrabber(int w, int h){ return initGrabber(w, h, true); };
+	bool initGrabber(int w, int h, bool defaultSettingsHack); // Read on the implementation what this hack is about...
 	void update();
 	bool isFrameNew();
 	
@@ -45,16 +52,44 @@ public:
 	
 	ofTexture & getTextureReference();
 	void setUseTexture(bool bUseTex);
+	
+	// Juicy normalized controls!
+	void setBrightness(float v);
+	void setContrast(float v);
+	void setGamma(float v);
+	void setHue(float v);		
+	void setGain(float v);	
+	void setShutter(float v);
+	void setAutoGainAndShutter(bool v);
+	void setLed(bool v);
+	
+	// this was supposed to work (as it works in Macam app), but I can't see any difference here
+	void setFlicker(int flickerType); // 0 - no flicker, 1 - 50hz, 2 - 60hz
+	
+	float getBrightness();
+	float getContrast();
+	float getGamma();
+	float getHue();		
+	float getGain();	
+	float getShutter();	
+	bool getAutoGainAndShutter();
 
 protected:
 	int deviceID;
 	int desiredFPS;
 	bool inited;
+	bool frameIsNew;
+	
+	bool isInited;
+	
+	bool autoGainAndShutter;
 	
 	bool bUseTex;
 	ofTexture tex;
-	
+		
 	void* ps3eye;
 	ofPixels pixels;
+	
+	void exit(ofEventArgs & args){close();};
 		
 };

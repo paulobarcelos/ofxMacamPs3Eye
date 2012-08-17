@@ -19,7 +19,5 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 	
-	ofxMacamPs3Eye cam1;
-	ofxMacamPs3Eye cam2;
-	ofxMacamPs3Eye cam3;
+	vector<ofxMacamPs3Eye*> cameras; 
 };

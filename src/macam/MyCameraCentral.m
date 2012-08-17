@@ -53,6 +53,10 @@ MyCameraCentral* sharedCameraCentral=NULL;
 - (NSString *) cameraDisabledKeyFromDriver:(MyCameraDriver *)camera;
 
 
+- (void) listAllCameras;
+- (void) listAllDuplicates;
+- (void) listAllMultiDriver;
+
 
 @end
     
@@ -437,6 +441,10 @@ MyCameraCentral* sharedCameraCentral=NULL;
 - (SInt32) osVersion
 {
     return osVersion;
+}
+
+-(NSMutableArray*) getCameras{
+	return cameras;
 }
 
 - (short) numCameras {

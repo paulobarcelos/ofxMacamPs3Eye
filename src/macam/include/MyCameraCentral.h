@@ -91,7 +91,7 @@
 - (SInt32) osVersion;
 
 //Camera management
-
+- (NSMutableArray*) getCameras;
 - (short) numCameras;
 - (short) indexOfCamera:(MyCameraDriver*)driver;
 - (short) indexOfDriverClass:(Class)driverClass;
@@ -122,9 +122,5 @@
 
 //Notification from running camera
 - (void) cameraHasShutDown:(id)sender;
-
-- (void) listAllCameras;
-- (void) listAllDuplicates;
-- (void) listAllMultiDriver;
 
 @end

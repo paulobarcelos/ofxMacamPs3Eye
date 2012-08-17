@@ -16,7 +16,7 @@
 	return self;
 }
 
-- (void)connectTo:(unsigned long)cid {
+- (BOOL)connectTo:(unsigned long)cid {
 	CameraError err;
 	err=[central useCameraWithID:cid to:&driver acceptDummy:NO];
 	if (err) 
@@ -44,8 +44,9 @@
 		}
 		[driver setDelegate:self];
 		[driver retain];			//We keep our own reference
-
+		return YES;
 	}
+	else return FALSE;
 }
 
 - (void)useWidth:(int)w useHeight:(int)h useFps:(int)f{
@@ -96,25 +97,23 @@
 	[driver setResolution:cameraResolution fps:cameraFPS];
 }
 
-- (void) startGrabbing { 
+- (BOOL) startGrabbing { 
 	 cameraGrabbing=[driver startGrabbing];
 	 if (cameraGrabbing){
-	 NSLog(@"PS3EyeWindowAppDelegate camera is grabbing");
-	 //		[self setImageOfToolbarItem:PlayToolbarItemIdentifier to:@"PauseToolbarItem"];
-	 //		 NSLog(@"Status: Playing")];
-	 //		 [fpsPopup setEnabled:NO];
-	 //		 [sizePopup setEnabled:NO];
-	 //		 [compressionSlider setEnabled:NO];
-	 //		 [reduceBandwidthCheckbox setEnabled:NO];
-	 [driver setImageBuffer:[imageRep bitmapData] bpp:3 rowBytes:[driver width]*3];
+		 NSLog(@"PS3EyeWindowAppDelegate camera is grabbing");
+		 //		[self setImageOfToolbarItem:PlayToolbarItemIdentifier to:@"PauseToolbarItem"];
+		 //		 NSLog(@"Status: Playing")];
+		 //		 [fpsPopup setEnabled:NO];
+		 //		 [sizePopup setEnabled:NO];
+		 //		 [compressionSlider setEnabled:NO];
+		 //		 [reduceBandwidthCheckbox setEnabled:NO];
+		 [driver setImageBuffer:[imageRep bitmapData] bpp:3 rowBytes:[driver width]*3];
+		 return YES;
 	 }
 	 else{
-	 NSLog(@"PS3EyeWindowAppDelegate camera not grabbing");
+		 NSLog(@"PS3EyeWindowAppDelegate camera not grabbing");
+		 return FALSE;
 	 }
-}
-
-- (void)shutdown{
-	[driver shutdown];
 }
 
 - (BOOL)isFrameNew
@@ -126,6 +125,15 @@
 	return false;
 }
 
+- (void) shutdown{
+	//[[[central getCameras]objectAtIndex:[central indexOfCamera:driver]] setDriver:NULL];
+	[driver setCentral:NULL];
+	[driver shutdown];
+	[driver release];
+	
+	
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification 
 {
 	[self connect];
@@ -133,64 +141,6 @@
 
 - (void) cameraDetected:(unsigned long) cid
 {
-	/*NSLog(@"CID %lu", cid);
-	CameraError err;
-	if (!driver) 
-	{
-		err=[central useCameraWithID:cid to:&driver acceptDummy:NO];
-		if (err) 
-		{
-			driver=NULL;
-			switch (err) 
-			{
-				case CameraErrorBusy:NSLog(@"Status: Camera used by another app"); break;
-				case CameraErrorNoPower:NSLog(@"Status: Not enough USB bus power"); break;
-				case CameraErrorNoCam:NSLog(@"Status: Camera not found (this shouldn't happen)"); break;
-				case CameraErrorNoMem:NSLog(@"Status: Out of memory"); break;
-				case CameraErrorUSBProblem:NSLog(@"Status: USB communication problem"); break;
-				case CameraErrorInternal:NSLog(@"Status: Internal error (this shouldn't happen)"); break;
-				case CameraErrorUnimplemented:NSLog(@"Status: Unsupported"); break;
-				default:NSLog(@"Status: Unknown error (this shouldn't happen)"); break;
-			}
-		}
-		if (driver!=NULL) 
-		{
-			if ([driver hasSpecificName])
-			{
-				NSLog(@"Status: Connected to %@", [driver getSpecificName]);
-			}else 
-			{
-				NSLog(@"Status: Connected to %@", [central nameForID:cid]);
-			}
-			[driver setDelegate:self];
-			[driver retain];			//We keep our own reference
-			NSLog(@"PS3EyeWindowAppDelegate: setting cameraWidth: %d cameraHeight: %d cameraFPS: %d", cameraWidth, cameraHeight, cameraFPS);
-			[driver setResolution:cameraResolution fps:cameraFPS];
-			cameraGrabbing=NO;
-			if ([driver supportsCameraFeature:CameraFeatureInspectorClassName]) 
-			{
-				NSString* inspectorName=[driver valueOfCameraFeature:CameraFeatureInspectorClassName];
-				if (inspectorName)
-				{
-					if (![@"MyCameraInspector" isEqualToString:inspectorName]) 
-					{
-//						Class c=NSClassFromString(inspectorName);
-//						 inspector=[(MyCameraInspector*)[c alloc] initWithCamera:driver];
-//						 if (inspector) 
-//						 {
-//						 NSDrawerState state;
-//						 [inspectorDrawer setContentView:[inspector contentView]];
-//						 state=[settingsDrawer state];
-//						 if ((state==NSDrawerOpeningState)||(state==NSDrawerOpenState)) 
-//						 {
-//						 [inspectorDrawer openOnEdge:NSMinXEdge];
-//						 }
-//						 }
-					}
-				}
-			}
-		}
-	}*/
 }
 
 - (void) imageReady:(id)cam 

@@ -17,11 +17,11 @@
 	
 	BOOL frameNew;
 }
-- (void)connectTo:(unsigned long)cid;
+- (BOOL)connectTo:(unsigned long)cid;
 - (void)useWidth:(int)w useHeight:(int)h useFps:(int)f;
-- (void)startGrabbing;
-- (void)shutdown;
+- (BOOL)startGrabbing;
 - (BOOL)isFrameNew;
+- (void)shutdown;
 
 //delegate calls from camera central
 - (void)cameraDetected:(unsigned long)cid;
