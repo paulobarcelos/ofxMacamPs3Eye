@@ -75,14 +75,16 @@ bool ofxMacamPs3Eye::initGrabber(int w, int h, bool defaultSettingsHack){
 				// I had some problems with some default settings not being set
 				// if the camera was in a wierd USB bus (eg. in a thunderbolt display)
 				// So better to force them here.
-				// The need for the sleep was empirical... setting it straight away was
-				// causing very strange behaviour on the cameras
+				// The need for this sleep was empirical... setting it straight away was
+				// sometimes causing very strange behaviour on the cameras.
 				ofSleepMillis(1500);
 				setAutoGainAndShutter(true);
 				setBrightness(0.5);
 				setContrast(0.5);
 				setGamma(0.5);
 				setHue(0.5);
+				setFlicker(0);
+				setWhiteBalance(4);
 				setLed(true);
 			}
 			
