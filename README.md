@@ -75,5 +75,5 @@ Same deal as Lion, except that you won't find the OSX 10.6 SDK there… so you n
 ##Known issues
 - Calling ````close()```` it's not really closing the camera properly, it won't jam it or anything in case you want to use the camera with another application later, but if you try to ````initGrabber()```` more than once during runtime (for example to change resolution), it will complain the camera is busy.
 
-##Known issues
+##Credits
 The big credits of this addon should go for everyone who collaborated in the [Macam](http://http://webcam-osx.sourceforge.net/) project for this camera to actually work on a mac. But the idea of using the source of Macam itself (and not the quicktime component) in a addon is by Jason Van Cleave, who made [PS3EyeWindow](https://github.com/jvcleave/PS3EyeWindow). Credits also to Kyle McDonald and [his fork of the PS3EyeWindow](https://github.com/kylemcdonald/PS3EyeWindow) where I saw the idea of using a delegate to interface with the driver and camera central. I've basically just copied and pasted most of that code, gave it a lot of love to allow multiple cameras to work and shaped it as a proper ofxAddon.	
