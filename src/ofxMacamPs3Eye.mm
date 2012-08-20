@@ -39,7 +39,7 @@ vector<ofxMacamPs3EyeDeviceInfo*> ofxMacamPs3Eye::getDeviceList(bool verbose){
 	return deviceList;
 }
 void ofxMacamPs3Eye::setDeviceID(int _deviceID){
-	vector<ofxMacamPs3EyeDeviceInfo*> deviceList = getDeviceList(true);
+	vector<ofxMacamPs3EyeDeviceInfo*> deviceList = getDeviceList(false);
 	bool idValid = false;
 	for (int i = 0; i < deviceList.size(); i++) {
 		if(_deviceID == deviceList[i]->id){
@@ -48,8 +48,11 @@ void ofxMacamPs3Eye::setDeviceID(int _deviceID){
 		}
 	}
 	if (!idValid) {
-		deviceID = deviceList[0]->id;
-		ofLogWarning("ofxMacamPs3Eye:: DeviceID ("+ofToString(_deviceID)+") is invalid. Setting to the first valid id ("+ofToString(deviceID)+"). Be aware that this id can already be in use.");
+		int id;
+		if(deviceList.size()) id = deviceList[0]->id;
+		else id = 0;
+		deviceID = id;
+		ofLogWarning("ofxMacamPs3Eye:: DeviceID ("+ofToString(_deviceID)+") is invalid. Setting id to ("+ofToString(deviceID)+"). Be aware that this id can already be in use.");
 	}
 	else {
 		deviceID = _deviceID;
@@ -97,16 +100,17 @@ bool ofxMacamPs3Eye::initGrabber(int w, int h, bool defaultSettingsHack){
 	return success;
 }
 void ofxMacamPs3Eye::update(){
-	// This logic should be improved...
-	// It's not guaranteed the threads will be synced.
-	// Would be better if there was some kind of double buffer mechanism on the delegate.
-	// Or that update only schedule a pixel copy on the on the imageReady callback on the delegate.
-	// Anyone?
+	// Ok, we need a smarter solution for this.
+	// As of now there isn't any syncronisation method between this thread and the
+	// capture thread. Instead, at PS3EyeWindowAppDelegate, there is a simple double 
+	// buffer queuing that reduces the chance racing, but don't elminate it. 
+	// You can expect some screen tearing every once in a while.
+	// Also the double buffer cause a one frame latency, which is undesired...
 	
-	if([ofxMacamPs3EyeCast(ps3eye).driver imageBuffer]){
+	if([ofxMacamPs3EyeCast(ps3eye) imageBuffer]){
 		if([ofxMacamPs3EyeCast(ps3eye) isFrameNew]){
 			frameIsNew = true;
-			pixels.setFromExternalPixels([ofxMacamPs3EyeCast(ps3eye).driver imageBuffer], getWidth(), getHeight(), 3);
+			pixels.setFromExternalPixels([ofxMacamPs3EyeCast(ps3eye) imageBuffer], getWidth(), getHeight(), 3);
 			if (bUseTex) {
 				tex.loadData(getPixels(), getWidth(), getHeight(), GL_RGB);
 			}
@@ -134,7 +138,7 @@ void ofxMacamPs3Eye::close(){
 	setLed(false);
 	
 
-	[ofxMacamPs3EyeCast(ps3eye) shutdown]; /// <------------------- apparently this is not working :S
+	[ofxMacamPs3EyeCast(ps3eye) shutdown]; /// <--------- I think this is not working :s
 }
 
 float ofxMacamPs3Eye::getHeight(){
@@ -209,13 +213,15 @@ void ofxMacamPs3Eye::setAutoGainAndShutter(bool v){
 	autoGainAndShutter = v;
 	[ofxMacamPs3EyeCast(ps3eye).driver setAutoGain:(BOOL)v];
 }
-void ofxMacamPs3Eye::setFlicker(int flickerType){
-	[ofxMacamPs3EyeCast(ps3eye).driver setFlicker:(FlickerType)flickerType];
+void ofxMacamPs3Eye::setFlicker(int v){
+	[ofxMacamPs3EyeCast(ps3eye).driver setFlicker:(FlickerType)v];
 }
 void ofxMacamPs3Eye::setLed(bool v){
 	[ofxMacamPs3EyeCast(ps3eye).driver setLed:v];
 }
-
+void ofxMacamPs3Eye::setWhiteBalance(int v){
+	[ofxMacamPs3EyeCast(ps3eye).driver setWhiteBalanceMode:(WhiteBalanceMode)v];
+}
 
 float ofxMacamPs3Eye::getBrightness(){
 	return ofMap([ofxMacamPs3EyeCast(ps3eye).driver brightness], -0.5, 1.5, 0, 1);
@@ -237,4 +243,13 @@ float ofxMacamPs3Eye::getShutter(){
 }
 bool ofxMacamPs3Eye::getAutoGainAndShutter(){
 	return autoGainAndShutter;
+}
+bool ofxMacamPs3Eye::getLed(){
+	return [ofxMacamPs3EyeCast(ps3eye).driver isLedOn];
+}
+int ofxMacamPs3Eye::getFlicker(){
+	return [ofxMacamPs3EyeCast(ps3eye).driver flicker];
+}
+int ofxMacamPs3Eye::getWhiteBalance(){
+	return [ofxMacamPs3EyeCast(ps3eye).driver whiteBalanceMode];
 }

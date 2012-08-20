@@ -12,6 +12,11 @@
 		[central startupWithNotificationsOnMainThread:YES recognizeLaterPlugins:YES];
 		
 		driver=NULL;
+		
+		// null buffers
+		for (int i = 0; i < PS3EYE_DELEGATE_BUFFER_SIZE; i++){
+			buffer[i] = NULL;
+		}
 	}
 	return self;
 }
@@ -95,6 +100,17 @@
 	[window setFrame:NSMakeRect(0, 768, 1024, 768) display:YES];
 	
 	[driver setResolution:cameraResolution fps:cameraFPS];
+	
+	// Allocate the buffers
+	for (int i = 0; i < PS3EYE_DELEGATE_BUFFER_SIZE; i++){
+		if(buffer[i] != NULL){
+			delete buffer[i];
+			buffer[i] = NULL;
+		}
+		buffer[i] = new unsigned char[cameraWidth * cameraHeight * 3];
+	}
+	bufferIndex = 0;
+	bufferNextIndex = 0;
 }
 
 - (BOOL) startGrabbing { 
@@ -125,6 +141,10 @@
 	return false;
 }
 
+- (unsigned char *) imageBuffer{
+	return buffer[bufferNextIndex];
+}
+
 - (void) shutdown{
 	//[[[central getCameras]objectAtIndex:[central indexOfCamera:driver]] setDriver:NULL];
 	[driver setCentral:NULL];
@@ -147,17 +167,22 @@
 	if (cam!=driver) return;	//probably an old one
 
 	
-	timeval lastTime = currentTime;
-	timeval difference;
+	struct timeval lastTime = currentTime;
+	struct timeval difference;
 	gettimeofday(&currentTime, NULL);
 	
 	timersub(&currentTime, &lastTime, &difference);
-    int diff = (int) (difference.tv_sec * 1000 + difference.tv_usec / 1000);
+    int diff = (int) (difference.tv_sec * 1000 + difference.tv_usec / 1000) / 2;
 
 	realFps = 1000.0 / (float)diff;
 	
 	//[imageView display];
 	[driver setImageBuffer:[driver imageBuffer] bpp:[driver imageBufferBPP] rowBytes:[driver imageBufferRowBytes]];
+	
+	bufferIndex = (bufferIndex + 1) % PS3EYE_DELEGATE_BUFFER_SIZE;
+	bufferNextIndex = (bufferIndex + 1) % PS3EYE_DELEGATE_BUFFER_SIZE;	
+	
+	memcpy(buffer[bufferIndex], [driver imageBuffer], cameraWidth * cameraHeight * 3 * sizeof(unsigned char));
 }
 
 - (void) updateStatus:(NSString *)status fpsDisplay:(float)fpsDisplay fpsReceived:(float)fpsReceived

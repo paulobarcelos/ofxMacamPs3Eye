@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1cd33e884d9e3358252e82a14dc97644 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 907c5b5e104864a2d3a2574573796b13 /* ofxToggle.cpp */; };
 		3321b96c9659105f44350a6c0a6b0619 /* PS3EyeWindowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 464c839d30cceff771b2e422d22d39be /* PS3EyeWindowAppDelegate.m */; };
+		483908258d00b98b4be69f0765fb3433 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78d67a00eb899fac0943059784f8212a /* ofxLabel.cpp */; };
 		49a32c9017d805133ec68733043dc964 /* AGC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3f33638670597c231fc3f62c1e9e3a46 /* AGC.m */; };
 		4c223a5ac3b77923c42438f77e6dbe00 /* OV534Driver.m in Sources */ = {isa = PBXBuildFile; fileRef = cf1e9c1085a9a9924e1d8804a93220de /* OV534Driver.m */; };
 		54246e0e70670038e43d95bc16105779 /* Histogram.m in Sources */ = {isa = PBXBuildFile; fileRef = b6de77b62f1e9d2bde3be888e91f8197 /* Histogram.m */; };
 		56c1461d4d6df6d99fcb8a9ad25529df /* Resolvers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = b57e64ee6d9af5e0a16fcd1e33da8a1b /* Resolvers.cpp */; };
+		5a4349e9754d6fa14c0f2a3a1abc30b6 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = fc5da1c87211d4f6377da7199d8c5a1e /* tinyxmlparser.cpp */; };
+		5cbb2ab3a60f65431d7b555db46d6bb4 /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = c88333e71c9457e441c33474bb3b58fa /* ofxButton.cpp */; };
+		63b57ac5bf4ef088491e0317dbb2ecaa /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50df87d612c5aae17aafa6c02c6bc570 /* ofxXmlSettings.cpp */; };
 		70d04cd0cf0891ebf497a21c168873e0 /* BayerConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = e9d916e101e14e9227713e4dc1bc34b5 /* BayerConverter.m */; };
 		7420f743c006b26b95ff90512867d88a /* LookUpTable.m in Sources */ = {isa = PBXBuildFile; fileRef = ee31c187f527e6c87eefd51d2d34fe36 /* LookUpTable.m */; };
+		837220e80eb56cd44ad27f2a12ff4869 /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15f2c6477a769c03a56d1401690aafec /* ofxSlider.cpp */; };
+		856aa354d08ab4b323081444d6da4e5a /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9604b925d32ee39065747725f0245d66 /* ofxBaseGui.cpp */; };
 		859c20916af9a4f8d4a929f6c3a84448 /* MyCameraDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = e8b3cff2d76d23e5130b03c615717253 /* MyCameraDriver.m */; };
 		90965e88edd92e0d10b07fe2f54456d8 /* Sensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4010a22ab915cb992f1b59bf4cadd039 /* Sensor.m */; };
+		933a2227713c720ceff80fd967d0a8ee /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2b40eda85beb63e46785bc299a638898 /* tinyxml.cpp */; };
+		9d44dc88ef9e7991b4a09951e2e4769f /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 832bdc407620cdba568b713d2252c43c /* tinyxmlerror.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -40,6 +49,7 @@
 		cd33672097fda1ffbedaa629a4c322b4 /* GenericDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1a67b9ce9777841b26a67c239080b1f7 /* GenericDriver.m */; };
 		d181bfbb3780ad7fdfc2bf76815473aa /* ofxMacamPs3Eye.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23ee769655944e3157cc5088372291bb /* ofxMacamPs3Eye.mm */; };
 		f04cccf871b1f43935bf762b1b56f835 /* ControllerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 5c34a8ac6c607a7afbaf4751205ee7c2 /* ControllerInterface.m */; };
+		f285eb3169f1566ca3d93c202ea4de6a /* ofxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = e112b3aebea2c091bf2b40ae5771826d /* ofxPanel.cpp */; };
 		f3e713688b294518f741b7e9625fa567 /* MyCameraCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = 32fa4dc39ad4eded926b01b0cd8d95da /* MyCameraCentral.m */; };
 /* End PBXBuildFile section */
 
@@ -74,12 +84,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01dcc0911400f9acf5b65578af4ec8f9 /* ofxXmlSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxXmlSettings.h; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.h; sourceTree = SOURCE_ROOT; };
+		0a1dac09f322ae313a40706d6408ef69 /* ofxToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxToggle.h; path = ../../../addons/ofxGui/src/ofxToggle.h; sourceTree = SOURCE_ROOT; };
 		137e35916e00e8f932c77f4f152415cc /* MyCameraCentral.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MyCameraCentral.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/MyCameraCentral.h; sourceTree = SOURCE_ROOT; };
+		13d0ef1c53049faa1bb437338e01851b /* ofParameter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofParameter.h; path = ../../../addons/ofxGui/src/ofParameter.h; sourceTree = SOURCE_ROOT; };
+		15f2c6477a769c03a56d1401690aafec /* ofxSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSlider.cpp; path = ../../../addons/ofxGui/src/ofxSlider.cpp; sourceTree = SOURCE_ROOT; };
 		1754ff232d736fa53dbcd7f06a270ff8 /* MiniGraphicsTools.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = MiniGraphicsTools.cpp; path = ../../../addons/ofxMacamPs3Eye/src/macam/MiniGraphicsTools.cpp; sourceTree = SOURCE_ROOT; };
+		17e65988300fbd9aaa2cd0ca7aad0cfc /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGui.h; path = ../../../addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
 		1a67b9ce9777841b26a67c239080b1f7 /* GenericDriver.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = GenericDriver.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/GenericDriver.m; sourceTree = SOURCE_ROOT; };
 		1c0de6ddd52e789af4aa5fe6b5e4a635 /* Sensor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Sensor.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/Sensor.h; sourceTree = SOURCE_ROOT; };
 		23ee769655944e3157cc5088372291bb /* ofxMacamPs3Eye.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ofxMacamPs3Eye.mm; path = ../../../addons/ofxMacamPs3Eye/src/ofxMacamPs3Eye.mm; sourceTree = SOURCE_ROOT; };
 		2614fa287618e9cfafbf1c7b8cdf0866 /* FrameCounter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FrameCounter.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/FrameCounter.h; sourceTree = SOURCE_ROOT; };
+		2834d88a62cd23f3de2c47d1c39bd645 /* ofxButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxButton.h; path = ../../../addons/ofxGui/src/ofxButton.h; sourceTree = SOURCE_ROOT; };
+		2b40eda85beb63e46785bc299a638898 /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
 		2c52c43910e7831daa684ac03009aca5 /* AGC.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AGC.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/AGC.h; sourceTree = SOURCE_ROOT; };
 		2eb74ad8b15d2ae23201a2cf2acc2da6 /* MyCameraDriver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MyCameraDriver.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/MyCameraDriver.h; sourceTree = SOURCE_ROOT; };
 		32fa4dc39ad4eded926b01b0cd8d95da /* MyCameraCentral.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = MyCameraCentral.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/MyCameraCentral.m; sourceTree = SOURCE_ROOT; };
@@ -89,12 +106,20 @@
 		464c839d30cceff771b2e422d22d39be /* PS3EyeWindowAppDelegate.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = PS3EyeWindowAppDelegate.m; path = ../../../addons/ofxMacamPs3Eye/src/PS3EyeWindowAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		47be5485b4a3f404846499fa6e2f0495 /* MiscTools.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MiscTools.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/MiscTools.h; sourceTree = SOURCE_ROOT; };
 		4c068762039e5b66a5822df1ada335dc /* MiscTools.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = MiscTools.cpp; path = ../../../addons/ofxMacamPs3Eye/src/macam/MiscTools.cpp; sourceTree = SOURCE_ROOT; };
+		50df87d612c5aae17aafa6c02c6bc570 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxXmlSettings.cpp; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
+		52afa1f08c420992caaae6484f64f920 /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSlider.h; path = ../../../addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
 		5c34a8ac6c607a7afbaf4751205ee7c2 /* ControllerInterface.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ControllerInterface.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/ControllerInterface.m; sourceTree = SOURCE_ROOT; };
 		6274cc2883159945c01aeedcdfae3fcb /* FrameCounter.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = FrameCounter.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/FrameCounter.m; sourceTree = SOURCE_ROOT; };
 		6d052dc6b3f5629d6e7143259fae5ce2 /* ofxMacamPs3Eye.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxMacamPs3Eye.h; path = ../../../addons/ofxMacamPs3Eye/src/ofxMacamPs3Eye.h; sourceTree = SOURCE_ROOT; };
 		6e44e5c09c8d861d4939f9ae2cccac10 /* BayerConverter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BayerConverter.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/BayerConverter.h; sourceTree = SOURCE_ROOT; };
 		77931d91b3b629c34fa05dab49318c08 /* Resolvers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Resolvers.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/Resolvers.h; sourceTree = SOURCE_ROOT; };
+		78d67a00eb899fac0943059784f8212a /* ofxLabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxLabel.cpp; path = ../../../addons/ofxGui/src/ofxLabel.cpp; sourceTree = SOURCE_ROOT; };
+		832bdc407620cdba568b713d2252c43c /* tinyxmlerror.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlerror.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
 		87d93ee57ad57449e2495a189b645024 /* GlobalDefs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = GlobalDefs.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/GlobalDefs.h; sourceTree = SOURCE_ROOT; };
+		87f26b4b24cbd428ad9eebaa693d846e /* ofxBaseGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBaseGui.h; path = ../../../addons/ofxGui/src/ofxBaseGui.h; sourceTree = SOURCE_ROOT; };
+		89449e3044d456f7de7bea14c80e5d81 /* ofxPanel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxPanel.h; path = ../../../addons/ofxGui/src/ofxPanel.h; sourceTree = SOURCE_ROOT; };
+		907c5b5e104864a2d3a2574573796b13 /* ofxToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxToggle.cpp; path = ../../../addons/ofxGui/src/ofxToggle.cpp; sourceTree = SOURCE_ROOT; };
+		9604b925d32ee39065747725f0245d66 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBaseGui.cpp; path = ../../../addons/ofxGui/src/ofxBaseGui.cpp; sourceTree = SOURCE_ROOT; };
 		96a74eee44271a03cd567617b2d1ba9a /* OV534Driver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OV534Driver.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/OV534Driver.h; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -107,7 +132,7 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* example-multipleCamerasDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-multipleCamerasDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* example-guiDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-guiDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
@@ -118,18 +143,24 @@
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		ab387c0823b100ffddbbf9d2459c7880 /* LookUpTable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LookUpTable.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/LookUpTable.h; sourceTree = SOURCE_ROOT; };
+		b21e7e5f548eea92f368040bb1aa2f69 /* tinyxml.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tinyxml.h; path = ../../../addons/ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
 		b57e64ee6d9af5e0a16fcd1e33da8a1b /* Resolvers.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Resolvers.cpp; path = ../../../addons/ofxMacamPs3Eye/src/macam/Resolvers.cpp; sourceTree = SOURCE_ROOT; };
 		b6de77b62f1e9d2bde3be888e91f8197 /* Histogram.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = Histogram.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/Histogram.m; sourceTree = SOURCE_ROOT; };
+		b87c60311ec1fe841c1ecd89b6d774d9 /* ofxLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxLabel.h; path = ../../../addons/ofxGui/src/ofxLabel.h; sourceTree = SOURCE_ROOT; };
 		bbfe848658bfd39968b880ead0c3938d /* MyCameraInfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MyCameraInfo.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/MyCameraInfo.h; sourceTree = SOURCE_ROOT; };
 		bc9cfe7abb8db2ca0f20d3fe4d994960 /* ControllerInterface.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ControllerInterface.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/ControllerInterface.h; sourceTree = SOURCE_ROOT; };
+		c88333e71c9457e441c33474bb3b58fa /* ofxButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxButton.cpp; path = ../../../addons/ofxGui/src/ofxButton.cpp; sourceTree = SOURCE_ROOT; };
 		c98555832c3fdead35dc1cf47cb89fb8 /* MiniGraphicsTools.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MiniGraphicsTools.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/MiniGraphicsTools.h; sourceTree = SOURCE_ROOT; };
 		cf1e9c1085a9a9924e1d8804a93220de /* OV534Driver.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = OV534Driver.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/OV534Driver.m; sourceTree = SOURCE_ROOT; };
+		e112b3aebea2c091bf2b40ae5771826d /* ofxPanel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxPanel.cpp; path = ../../../addons/ofxGui/src/ofxPanel.cpp; sourceTree = SOURCE_ROOT; };
 		e8b3cff2d76d23e5130b03c615717253 /* MyCameraDriver.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = MyCameraDriver.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/MyCameraDriver.m; sourceTree = SOURCE_ROOT; };
 		e9d916e101e14e9227713e4dc1bc34b5 /* BayerConverter.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = BayerConverter.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/BayerConverter.m; sourceTree = SOURCE_ROOT; };
 		eb138edee72a0fb98099f3dae821cbb8 /* Histogram.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Histogram.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/Histogram.h; sourceTree = SOURCE_ROOT; };
 		ee31c187f527e6c87eefd51d2d34fe36 /* LookUpTable.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = LookUpTable.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/LookUpTable.m; sourceTree = SOURCE_ROOT; };
 		f02d6d110be6f1f1d1c6544f99ebcac0 /* PS3EyeWindowAppDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PS3EyeWindowAppDelegate.h; path = ../../../addons/ofxMacamPs3Eye/src/PS3EyeWindowAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		f4298e07120123a1bdc14911b2b36bac /* GenericDriver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = GenericDriver.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/GenericDriver.h; sourceTree = SOURCE_ROOT; };
+		fc2f26dc5662161c7db2ecd7a5a6d5b4 /* ofOscParameter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofOscParameter.h; path = ../../../addons/ofxGui/src/ofOscParameter.h; sourceTree = SOURCE_ROOT; };
+		fc5da1c87211d4f6377da7199d8c5a1e /* tinyxmlparser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlparser.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,10 +219,49 @@
 			name = ofxMacamPs3Eye;
 			sourceTree = "<group>";
 		};
+		1f4fb5c423662b96adfdcc0badec1cb0 /* ofxXmlSettings */ = {
+			isa = PBXGroup;
+			children = (
+				6ecef0d76bc33727823eadffc320c44d /* src */,
+				6e54289412d2d94f45a051132369530c /* libs */,
+			);
+			name = ofxXmlSettings;
+			sourceTree = "<group>";
+		};
+		480a780d8d0308ae4a3688014739cb6d /* ofxGui */ = {
+			isa = PBXGroup;
+			children = (
+				a763ed608b35ae3310251dee914bc36d /* src */,
+			);
+			name = ofxGui;
+			sourceTree = "<group>";
+		};
+		6e54289412d2d94f45a051132369530c /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				2b40eda85beb63e46785bc299a638898 /* tinyxml.cpp */,
+				b21e7e5f548eea92f368040bb1aa2f69 /* tinyxml.h */,
+				832bdc407620cdba568b713d2252c43c /* tinyxmlerror.cpp */,
+				fc5da1c87211d4f6377da7199d8c5a1e /* tinyxmlparser.cpp */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		6ecef0d76bc33727823eadffc320c44d /* src */ = {
+			isa = PBXGroup;
+			children = (
+				50df87d612c5aae17aafa6c02c6bc570 /* ofxXmlSettings.cpp */,
+				01dcc0911400f9acf5b65578af4ec8f9 /* ofxXmlSettings.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				480a780d8d0308ae4a3688014739cb6d /* ofxGui */,
 				13ebfbd5a535d9f601941ac0a4ac6aba /* ofxMacamPs3Eye */,
+				1f4fb5c423662b96adfdcc0badec1cb0 /* ofxXmlSettings */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -249,7 +319,7 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
-				E4B69B5B0A3A1756003C02F2 /* example-multipleCamerasDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* example-guiDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +340,28 @@
 				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		a763ed608b35ae3310251dee914bc36d /* src */ = {
+			isa = PBXGroup;
+			children = (
+				fc2f26dc5662161c7db2ecd7a5a6d5b4 /* ofOscParameter.h */,
+				13d0ef1c53049faa1bb437338e01851b /* ofParameter.h */,
+				9604b925d32ee39065747725f0245d66 /* ofxBaseGui.cpp */,
+				87f26b4b24cbd428ad9eebaa693d846e /* ofxBaseGui.h */,
+				c88333e71c9457e441c33474bb3b58fa /* ofxButton.cpp */,
+				2834d88a62cd23f3de2c47d1c39bd645 /* ofxButton.h */,
+				17e65988300fbd9aaa2cd0ca7aad0cfc /* ofxGui.h */,
+				78d67a00eb899fac0943059784f8212a /* ofxLabel.cpp */,
+				b87c60311ec1fe841c1ecd89b6d774d9 /* ofxLabel.h */,
+				e112b3aebea2c091bf2b40ae5771826d /* ofxPanel.cpp */,
+				89449e3044d456f7de7bea14c80e5d81 /* ofxPanel.h */,
+				15f2c6477a769c03a56d1401690aafec /* ofxSlider.cpp */,
+				52afa1f08c420992caaae6484f64f920 /* ofxSlider.h */,
+				907c5b5e104864a2d3a2574573796b13 /* ofxToggle.cpp */,
+				0a1dac09f322ae313a40706d6408ef69 /* ofxToggle.h */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		e5e0522c87296aa71173405060d028a5 /* src */ = {
@@ -310,9 +402,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* example-multipleCameras */ = {
+		E4B69B5A0A3A1756003C02F2 /* example-gui */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-multipleCameras" */;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-gui" */;
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
@@ -324,9 +416,9 @@
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
-			name = "example-multipleCameras";
+			name = "example-gui";
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* example-multipleCamerasDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* example-guiDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -334,7 +426,7 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-multipleCameras" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-gui" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -355,7 +447,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* example-multipleCameras */,
+				E4B69B5A0A3A1756003C02F2 /* example-gui */,
 			);
 		};
 /* End PBXProject section */
@@ -393,6 +485,12 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
+				856aa354d08ab4b323081444d6da4e5a /* ofxBaseGui.cpp in Sources */,
+				5cbb2ab3a60f65431d7b555db46d6bb4 /* ofxButton.cpp in Sources */,
+				483908258d00b98b4be69f0765fb3433 /* ofxLabel.cpp in Sources */,
+				f285eb3169f1566ca3d93c202ea4de6a /* ofxPanel.cpp in Sources */,
+				837220e80eb56cd44ad27f2a12ff4869 /* ofxSlider.cpp in Sources */,
+				1cd33e884d9e3358252e82a14dc97644 /* ofxToggle.cpp in Sources */,
 				49a32c9017d805133ec68733043dc964 /* AGC.m in Sources */,
 				70d04cd0cf0891ebf497a21c168873e0 /* BayerConverter.m in Sources */,
 				f04cccf871b1f43935bf762b1b56f835 /* ControllerInterface.m in Sources */,
@@ -410,6 +508,10 @@
 				90965e88edd92e0d10b07fe2f54456d8 /* Sensor.m in Sources */,
 				d181bfbb3780ad7fdfc2bf76815473aa /* ofxMacamPs3Eye.mm in Sources */,
 				3321b96c9659105f44350a6c0a6b0619 /* PS3EyeWindowAppDelegate.m in Sources */,
+				63b57ac5bf4ef088491e0317dbb2ecaa /* ofxXmlSettings.cpp in Sources */,
+				933a2227713c720ceff80fd967d0a8ee /* tinyxml.cpp in Sources */,
+				9d44dc88ef9e7991b4a09951e2e4769f /* tinyxmlerror.cpp in Sources */,
+				5a4349e9754d6fa14c0f2a3a1abc30b6 /* tinyxmlparser.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,10 +548,15 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
+					src,
+					../../../addons/ofxGui/libs,
+					../../../addons/ofxGui/src,
 					../../../addons/ofxMacamPs3Eye/libs,
 					../../../addons/ofxMacamPs3Eye/src,
 					../../../addons/ofxMacamPs3Eye/src/macam,
 					../../../addons/ofxMacamPs3Eye/src/macam/include,
+					../../../addons/ofxXmlSettings/libs,
+					../../../addons/ofxXmlSettings/src,
 				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
@@ -482,10 +589,15 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
+					src,
+					../../../addons/ofxGui/libs,
+					../../../addons/ofxGui/src,
 					../../../addons/ofxMacamPs3Eye/libs,
 					../../../addons/ofxMacamPs3Eye/src,
 					../../../addons/ofxMacamPs3Eye/src/macam,
 					../../../addons/ofxMacamPs3Eye/src/macam/include,
+					../../../addons/ofxXmlSettings/libs,
+					../../../addons/ofxXmlSettings/src,
 				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
@@ -673,7 +785,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-multipleCameras" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-gui" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,
@@ -682,7 +794,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-multipleCameras" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-gui" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,

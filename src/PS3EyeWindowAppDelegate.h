@@ -1,6 +1,8 @@
 #import <Cocoa/Cocoa.h>
 #import "MyCameraCentral.h"
 
+#define PS3EYE_DELEGATE_BUFFER_SIZE 2
+
 @interface PS3EyeWindowAppDelegate : NSObject <NSApplicationDelegate> {
 	NSWindow *window;
 	NSImage* image;
@@ -9,7 +11,11 @@
 	MyCameraCentral* central;
 	MyCameraDriver* driver;
 	
-	timeval currentTime;
+	unsigned char * buffer[PS3EYE_DELEGATE_BUFFER_SIZE];
+	int bufferIndex;
+	int bufferNextIndex;
+	
+	struct timeval currentTime;
 	
 	BOOL cameraGrabbing;
 	CameraResolution cameraResolution;
@@ -25,6 +31,7 @@
 - (void)useWidth:(int)w useHeight:(int)h useFps:(int)f;
 - (BOOL)startGrabbing;
 - (BOOL)isFrameNew;
+- (unsigned char *) imageBuffer;
 - (void)shutdown;
 
 //delegate calls from camera central

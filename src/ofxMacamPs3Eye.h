@@ -15,7 +15,7 @@ public:
 	~ofxMacamPs3Eye();
 	
 	void listDevices(){getDeviceList(true);};	
-	static vector<ofxMacamPs3EyeDeviceInfo*> getDeviceList(bool verbose = true);
+	static vector<ofxMacamPs3EyeDeviceInfo*> getDeviceList(bool verbose = false);
 	bool initGrabber(int w, int h){ return initGrabber(w, h, true); };
 	bool initGrabber(int w, int h, bool defaultSettingsHack); // Read on the implementation what this hack is about...
 	void update();
@@ -56,18 +56,20 @@ public:
 	ofTexture & getTextureReference();
 	void setUseTexture(bool bUseTex);
 	
-	// Juicy normalized controls!
+	// Juicy controls!
+	void setAutoGainAndShutter(bool v);
+	
+	/* normalized */
 	void setBrightness(float v);
 	void setContrast(float v);
 	void setGamma(float v);
 	void setHue(float v);		
-	void setGain(float v);	
-	void setShutter(float v);
-	void setAutoGainAndShutter(bool v);
-	void setLed(bool v);
+	void setGain(float v);	// <-- will only work if setAutoGainAndShutter(false)
+	void setShutter(float v); // <-- will only work if setAutoGainAndShutter(false)
 	
-	// this was supposed to work (as it works in Macam app), but I can't see any difference here
-	void setFlicker(int flickerType); // 0 - no flicker, 1 - 50hz, 2 - 60hz
+	void setLed(bool v);
+	void setFlicker(int v); // 0 - no flicker, 1 - 50hz, 2 - 60hz
+	void setWhiteBalance(int v);// 1 - linear, 2 - indoor, 3 - outdoor, 4 - auto
 	
 	float getBrightness();
 	float getContrast();
@@ -76,6 +78,9 @@ public:
 	float getGain();	
 	float getShutter();	
 	bool getAutoGainAndShutter();
+	bool getLed();
+	int getFlicker();
+	int getWhiteBalance();
 
 protected:
 	int deviceID;
