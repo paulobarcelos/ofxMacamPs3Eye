@@ -2,7 +2,7 @@
 
 @implementation PS3EyeWindowAppDelegate
 
-@synthesize window, central, driver, realFps;
+@synthesize window, central, driver, realFps, needsFrame;
 
 -(id)init {
 	self = [super init];
@@ -13,10 +13,7 @@
 		
 		driver=NULL;
 		
-		// null buffers
-		for (int i = 0; i < PS3EYE_DELEGATE_BUFFER_SIZE; i++){
-			buffer[i] = NULL;
-		}
+		buffer = NULL;
 	}
 	return self;
 }
@@ -102,15 +99,11 @@
 	[driver setResolution:cameraResolution fps:cameraFPS];
 	
 	// Allocate the buffers
-	for (int i = 0; i < PS3EYE_DELEGATE_BUFFER_SIZE; i++){
-		if(buffer[i] != NULL){
-			delete buffer[i];
-			buffer[i] = NULL;
-		}
-		buffer[i] = new unsigned char[cameraWidth * cameraHeight * 3];
+	if(buffer != NULL){
+		delete buffer;
+		buffer = NULL;
 	}
-	bufferIndex = 0;
-	bufferNextIndex = 0;
+	buffer = new unsigned char[cameraWidth * cameraHeight * 3];
 }
 
 - (BOOL) startGrabbing { 
@@ -124,6 +117,7 @@
 		 //		 [compressionSlider setEnabled:NO];
 		 //		 [reduceBandwidthCheckbox setEnabled:NO];
 		 [driver setImageBuffer:[imageRep bitmapData] bpp:3 rowBytes:[driver width]*3];
+		 needsFrame = false;
 		 return YES;
 	 }
 	 else{
@@ -142,7 +136,7 @@
 }
 
 - (unsigned char *) imageBuffer{
-	return buffer[bufferNextIndex];
+	return buffer;
 }
 
 - (void) shutdown{
@@ -163,7 +157,6 @@
 
 - (void) imageReady:(id)cam 
 {
-	frameNew = true;
 	if (cam!=driver) return;	//probably an old one
 
 	
@@ -178,11 +171,13 @@
 	
 	//[imageView display];
 	[driver setImageBuffer:[driver imageBuffer] bpp:[driver imageBufferBPP] rowBytes:[driver imageBufferRowBytes]];
+
+	if(needsFrame){
+		memcpy(buffer, [driver imageBuffer], cameraWidth * cameraHeight * 3 * sizeof(unsigned char));
+		frameNew = true;
+		needsFrame = false;
+	}
 	
-	bufferIndex = (bufferIndex + 1) % PS3EYE_DELEGATE_BUFFER_SIZE;
-	bufferNextIndex = (bufferIndex + 1) % PS3EYE_DELEGATE_BUFFER_SIZE;	
-	
-	memcpy(buffer[bufferIndex], [driver imageBuffer], cameraWidth * cameraHeight * 3 * sizeof(unsigned char));
 }
 
 - (void) updateStatus:(NSString *)status fpsDisplay:(float)fpsDisplay fpsReceived:(float)fpsReceived

@@ -102,25 +102,18 @@ bool ofxMacamPs3Eye::initGrabber(int w, int h, bool defaultSettingsHack){
 	return success;
 }
 void ofxMacamPs3Eye::update(){
-	// Ok, we need a smarter solution for this.
-	// As of now there isn't any syncronisation method between this thread and the
-	// capture thread. Instead, at PS3EyeWindowAppDelegate, there is a simple double 
-	// buffer queuing that reduces the chance racing, but don't elminate it. 
-	// You can expect some screen tearing every once in a while.
-	// Also the double buffer cause a one frame latency, which is undesired...
-	
-	if([ofxMacamPs3EyeCast(ps3eye) imageBuffer]){
-		if([ofxMacamPs3EyeCast(ps3eye) isFrameNew]){
-			frameIsNew = true;
-			pixels.setFromExternalPixels([ofxMacamPs3EyeCast(ps3eye) imageBuffer], getWidth(), getHeight(), 3);
-			if (bUseTex) {
-				tex.loadData(getPixels(), getWidth(), getHeight(), GL_RGB);
-			}
-		}
-		else {
-			frameIsNew = false;
+	ofxMacamPs3EyeCast(ps3eye).needsFrame = true;
+	if([ofxMacamPs3EyeCast(ps3eye) isFrameNew]){
+		frameIsNew = true;
+		pixels.setFromExternalPixels([ofxMacamPs3EyeCast(ps3eye) imageBuffer], getWidth(), getHeight(), 3);
+		if (bUseTex) {
+			tex.loadData(getPixels(), getWidth(), getHeight(), GL_RGB);
 		}
 	}
+	else {
+		frameIsNew = false;
+	}
+	
 }
 bool ofxMacamPs3Eye::isFrameNew(){
 	return frameIsNew;

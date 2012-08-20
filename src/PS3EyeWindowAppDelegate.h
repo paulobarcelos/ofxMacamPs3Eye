@@ -10,10 +10,8 @@
 	NSImageView* imageView;
 	MyCameraCentral* central;
 	MyCameraDriver* driver;
-	
-	unsigned char * buffer[PS3EYE_DELEGATE_BUFFER_SIZE];
-	int bufferIndex;
-	int bufferNextIndex;
+
+	unsigned char * buffer;
 	
 	struct timeval currentTime;
 	
@@ -24,6 +22,7 @@
 	int cameraFPS;
 	
 	BOOL frameNew;
+	BOOL needsFrame;
 	
 	float realFps;
 }
@@ -46,6 +45,6 @@
 @property (readonly) MyCameraCentral* central;
 @property (readonly) MyCameraDriver* driver;
 @property (readonly) float realFps;
-
+@property (atomic) BOOL needsFrame;
 
 @end
