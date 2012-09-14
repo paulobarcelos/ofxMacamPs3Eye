@@ -84,7 +84,7 @@ bool ofxMacamPs3Eye::initGrabber(int w, int h, bool defaultSettingsHack){
 				setGamma(0.5);
 				setHue(0.5);
 				setFlicker(0);
-				setWhiteBalance(4);
+				setWhiteBalance(1);
 				setLed(true);
 			}
 			
