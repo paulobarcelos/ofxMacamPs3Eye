@@ -33,6 +33,7 @@ void testApp::update(){
 void testApp::draw(){
 	for (int i = 0; i < cameras.size(); i++) {
 		cameras[i]->draw(i * cameras[i]->getWidth(),0);
+		ofDrawBitmapString(ofToString(cameras[i]->getRealFrameRate()), i * cameras[i]->getWidth() + 20, 20);
 	}
 	
 	if(cameras.size() == 0){
