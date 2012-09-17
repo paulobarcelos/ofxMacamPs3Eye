@@ -30,6 +30,7 @@ vector<ofxMacamPs3EyeDeviceInfo*> ofxMacamPs3Eye::getDeviceList(bool verbose){
 	for(int i = 0; i < [[MyCameraCentral sharedCameraCentral] numCameras]; i++){
 		ofxMacamPs3EyeDeviceInfo * info = new ofxMacamPs3EyeDeviceInfo();
 		info->id = [[MyCameraCentral sharedCameraCentral] idOfCameraWithIndex:i];
+        info->locationID = [[MyCameraCentral sharedCameraCentral] locationIDOfCameraWithIndex:i];
 		[[MyCameraCentral sharedCameraCentral] getName:info->name forID:info->id maxLength:255];
 		deviceList.push_back(info);		
 		if(verbose)ofLogVerbose("["+ofToString(info->id)+"] - " + info->name);

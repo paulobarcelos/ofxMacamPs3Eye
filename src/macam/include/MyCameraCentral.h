@@ -98,6 +98,7 @@
 - (unsigned long) idOfCameraWithIndex:(short)idx;
 - (UInt16) versionOfCameraWithIndex:(short)idx;
 - (unsigned long) idOfCameraWithLocationID:(UInt32)locID;
+- (unsigned long) locationIDOfCameraWithIndex:(short)idx;
 - (CameraError) useCameraWithID:(unsigned long)cid to:(MyCameraDriver**)outCam acceptDummy:(BOOL)acceptDummy;
 - (NSString*) nameForID:(unsigned long)cid;
 - (NSString*) nameForDriver:(MyCameraDriver*)driver;

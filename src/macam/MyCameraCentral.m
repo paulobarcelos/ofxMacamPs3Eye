@@ -493,6 +493,11 @@ MyCameraCentral* sharedCameraCentral=NULL;
     return 0;    
 }
 
+- (unsigned long) locationIDOfCameraWithIndex:(short)idx{
+    if ((idx<0)||(idx>=[self numCameras])) return 0;
+    return [[cameras objectAtIndex:idx] locationID];
+}
+
 - (CameraError) useCameraWithID:(unsigned long)cid to:(MyCameraDriver**)outCam acceptDummy:(BOOL)acceptDummy 
 {
     long l;
