@@ -6,6 +6,7 @@
 
 struct ofxMacamPs3EyeDeviceInfo{
 	int id;
+    unsigned long locationID;
 	char name[255];
 };
 

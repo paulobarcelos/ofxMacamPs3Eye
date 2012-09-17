@@ -158,7 +158,7 @@
     NSLog(@" cid = %i\n", [cameraInfo cid]);
     NSLog(@" VID = 0x%04X\n", [cameraInfo vendorID]);
     NSLog(@" PID = 0x%04X\n", [cameraInfo productID]);
-    NSLog(@" lid = 0x%08X\n", [cameraInfo locationID]);
+    NSLog(@" lid = %lu\n", [cameraInfo locationID]);
     NSLog(@" version = 0x%04X\n", [cameraInfo versionNumber]);
     NSLog(@" name = %@\n", [cameraInfo cameraName]);
     NSLog(@" driver = %i\n", [cameraInfo driver]);
