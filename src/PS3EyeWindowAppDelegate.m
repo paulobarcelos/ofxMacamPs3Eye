@@ -9,7 +9,7 @@
 	if(self) {
 		central = [MyCameraCentral sharedCameraCentral];
 		//[central setDelegate:self];
-		[central startupWithNotificationsOnMainThread:NO recognizeLaterPlugins:YES];
+		[central startupWithNotificationsOnMainThread:YES recognizeLaterPlugins:YES];
 		
 		driver=NULL;
 		
