@@ -115,7 +115,7 @@
         return NULL;
     }
 	
-    doNotificationsOnMainThread=[central doNotificationsOnMainThread];
+    doNotificationsOnMainThread=NO;//[central doNotificationsOnMainThread]; // <-- Hardcoded this to NO as for some reason greater than my knowlege, YES was causing a memory leak.
     mainThreadRunLoop=[NSRunLoop currentRunLoop];
     mainThreadConnection=NULL;
     decodingThreadConnection=NULL;
