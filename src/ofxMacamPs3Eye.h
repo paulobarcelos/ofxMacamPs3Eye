@@ -26,7 +26,7 @@ public:
 	void setDesiredFrameRate(int framerate);
 	int getDesiredFrameRate();
 	
-    void setPixelFormat(ofPixelFormat pixelFormat);
+    bool setPixelFormat(ofPixelFormat pixelFormat);
     ofPixelFormat getPixelFormat();
     void videoSettings();
     void setVerbose(bool bTalkToMe);
