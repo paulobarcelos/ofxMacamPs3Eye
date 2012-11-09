@@ -160,7 +160,12 @@ float ofxMacamPs3Eye::getRealFrameRate(){
 }
 
 bool ofxMacamPs3Eye::setPixelFormat(ofPixelFormat pixelFormat) {
-	ofLogVerbose("ofxMacamPs3Eye:: setPixelFormat is not implemented.");
+	//note as we only support RGB we are just confirming that this pixel format is supported
+	if( pixelFormat == OF_PIXELS_RGB ){
+		return true;
+	}
+	ofLogWarning("ofxMacamPs3Eye:: Requested pixel format not supported.");
+	return false;
 };
 ofPixelFormat ofxMacamPs3Eye::getPixelFormat() {
 	return OF_PIXELS_RGB;
