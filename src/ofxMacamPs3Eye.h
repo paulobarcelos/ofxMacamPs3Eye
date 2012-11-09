@@ -26,12 +26,11 @@ public:
 	void setDesiredFrameRate(int framerate);
 	int getDesiredFrameRate();
 	
-    // Temporary fix for abstract class issue
-    bool setPixelFormat(ofPixelFormat pixelFormat) { return true;}
-    ofPixelFormat getPixelFormat() { return OF_PIXELS_MONO;};
-    void videoSettings() {}
-    void setVerbose(bool bTalkToMe) {}
-    
+    void setPixelFormat(ofPixelFormat pixelFormat);
+    ofPixelFormat getPixelFormat();
+    void videoSettings();
+    void setVerbose(bool bTalkToMe);
+	
 	float getRealFrameRate();
 	
 	unsigned char * getPixels();

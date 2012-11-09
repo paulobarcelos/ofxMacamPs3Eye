@@ -159,6 +159,19 @@ float ofxMacamPs3Eye::getRealFrameRate(){
 	return [ofxMacamPs3EyeCast(ps3eye) realFps];
 }
 
+void ofxMacamPs3Eye::setPixelFormat(ofPixelFormat pixelFormat) {
+	ofLogVerbose("ofxMacamPs3Eye:: setPixelFormat is not implemented.");
+};
+ofPixelFormat ofxMacamPs3Eye::getPixelFormat() {
+	return OF_PIXELS_RGB;
+}
+void ofxMacamPs3Eye::videoSettings() {
+	ofLogVerbose("ofxMacamPs3Eye:: videoSettings is not implemented.");
+};
+void ofxMacamPs3Eye::setVerbose(bool bTalkToMe) {
+	ofLogVerbose("ofxMacamPs3Eye:: setVerbose is not implemented. Log messages will follow OpenFramework's built in logging levels.");
+};
+
 void ofxMacamPs3Eye::setAnchorPercent(float xPct, float yPct){
 	if(bUseTex)tex.setAnchorPercent(xPct, yPct);
 }
