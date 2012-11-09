@@ -23,7 +23,7 @@ _in testApp.cpp:_
     void testApp::update(){
     	ps3eye.update();
     }
-    void testApp::update(){
+    void testApp::draw(){
     	ps3eye.draw(0,0);
     }
 
