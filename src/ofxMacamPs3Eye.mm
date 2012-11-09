@@ -159,8 +159,9 @@ float ofxMacamPs3Eye::getRealFrameRate(){
 	return [ofxMacamPs3EyeCast(ps3eye) realFps];
 }
 
-void ofxMacamPs3Eye::setPixelFormat(ofPixelFormat pixelFormat) {
+bool ofxMacamPs3Eye::setPixelFormat(ofPixelFormat pixelFormat) {
 	ofLogVerbose("ofxMacamPs3Eye:: setPixelFormat is not implemented.");
+	return true;
 };
 ofPixelFormat ofxMacamPs3Eye::getPixelFormat() {
 	return OF_PIXELS_RGB;
