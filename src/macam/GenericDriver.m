@@ -1886,7 +1886,7 @@ void BufferProviderRelease(void * info, const void * data, size_t size)
 
 - (BOOL) decodeBufferQuicktimeImage: (GenericChunkBuffer *) buffer
 {
-    OSErr err;
+    /*OSErr err;
     GWorldPtr gw;
     CGrafPtr oldPort;
     GDHandle oldGDev;
@@ -1925,14 +1925,15 @@ void BufferProviderRelease(void * info, const void * data, size_t size)
                  rowBytes:nextImageBufferRowBytes 
                       bpp:nextImageBufferBPP];
     
-    return (err) ? NO : YES;
+    return (err) ? NO : YES;*/
+	return YES;
 }
 
 
 
 - (BOOL) decodeBufferQuicktimeSequence: (GenericChunkBuffer *) buffer
 {
-    OSErr err;
+   /* OSErr err;
     
     err = DecompressSequenceFrameS(SequenceDecoding.sequenceIdentifier, 
                              (Ptr) (buffer->buffer + decodingSkipBytes),
@@ -1951,7 +1952,8 @@ void BufferProviderRelease(void * info, const void * data, size_t size)
         printf("QuickTime Sequence decoding error!\n");
 #endif
     
-    return (err) ? NO : YES;
+    return (err) ? NO : YES;*/
+	return YES;
 }
 
 - (BOOL) decodeBufferJPEG: (GenericChunkBuffer *) buffer
