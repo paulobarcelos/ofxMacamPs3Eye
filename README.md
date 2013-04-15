@@ -66,14 +66,13 @@ While ````ps3eye.listDevices();```` works exactly like ofVideoGrabber (just prin
 ####And more
 You can also control the frame-rate and resolution, but for those it's maybe better if you poke with the source code yourself as there are still some sharper corners (and some broken stuff) and the implementation might change slightly in the future.
 	
-	
-##Compiling on Lion
-As Macam depends on OSX 10.6 SDK, make sure to select **Base SDK > _Mac OSX 10.6_** on your Build Settings.
-##Compiling on Mountain Lion
-Same deal as Lion, except that you won't find the OSX 10.6 SDK there… so you need to get a hold on it first. As OpenFrameworks itself will break on Mountain Lion without that SDK, I suggest you reading this first: [Beware! OS X Mountain Lion 10.8 broke my oF 0071](http://forum.openframeworks.cc/index.php?topic=10391.0)
 
 ##Known issues
 - Calling ````close()```` it's not really closing the camera properly, it won't jam it or anything in case you want to use the camera with another application later, but if you try to ````initGrabber()```` more than once during runtime (for example to change resolution), it will complain the camera is busy.
 
 ##Credits
 The big credits of this addon should go for everyone who collaborated in the [Macam](http://http://webcam-osx.sourceforge.net/) project for this camera to actually work on a mac. But the idea of using the source of Macam itself (and not the quicktime component) in a addon is by Jason Van Cleave, who made [PS3EyeWindow](https://github.com/jvcleave/PS3EyeWindow). Credits also to Kyle McDonald and [his fork of the PS3EyeWindow](https://github.com/kylemcdonald/PS3EyeWindow) where I saw the idea of using a delegate to interface with the driver and camera central. I've basically just copied and pasted most of that code, gave it a lot of love to allow multiple cameras to work and shaped it as a proper ofxAddon.	
+
+##Change log
+- v2.1.0 - Removed osx 10.6 SDK dependencies
+ 
