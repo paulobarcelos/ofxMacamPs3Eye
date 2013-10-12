@@ -19,6 +19,24 @@ ofxMacamPs3Eye::~ofxMacamPs3Eye(){
 	close();
 }
 
+/**
+ * This gets the device list and does its best to populate a vector of ofVideoDevices.
+ */
+vector<ofVideoDevice> ofxMacamPs3Eye::listDevices() {
+    
+    vector<ofxMacamPs3EyeDeviceInfo*> deviceInfos = getDeviceList(true);
+    vector<ofVideoDevice> devices;
+    
+    for (int i = 0; i < deviceInfos.size(); i++) {
+        ofVideoDevice device;
+        device.id = deviceInfos[i]->id;
+        device.deviceName = deviceInfos[i]->name;
+        devices.push_back(device);
+    }
+    
+    return devices;
+}
+
 vector<ofxMacamPs3EyeDeviceInfo*> ofxMacamPs3Eye::getDeviceList(bool verbose){
 	// We need to start the central to get this info
 	[[MyCameraCentral sharedCameraCentral] startupWithNotificationsOnMainThread:YES recognizeLaterPlugins:YES];
