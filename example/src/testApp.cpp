@@ -3,8 +3,6 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-	//ofSetVerticalSync(true);
-	
 	camWidth = 640;
 	camHeight = 480;
 	

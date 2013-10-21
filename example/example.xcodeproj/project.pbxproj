@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3321b96c9659105f44350a6c0a6b0619 /* PS3EyeWindowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 464c839d30cceff771b2e422d22d39be /* PS3EyeWindowAppDelegate.m */; };
-		38396F2217E2FED30099EA50 /* ExtendedFXObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38396F1717E2FED30099EA50 /* ExtendedFXObject.cpp */; };
-		38396F2317E2FED30099EA50 /* Manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38396F1817E2FED30099EA50 /* Manager.cpp */; };
-		38396F2417E2FED30099EA50 /* Patch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38396F1917E2FED30099EA50 /* Patch.cpp */; };
-		38396F2517E2FED30099EA50 /* PatchInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38396F1A17E2FED30099EA50 /* PatchInput.cpp */; };
-		38396F2617E2FED30099EA50 /* PatchOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38396F1B17E2FED30099EA50 /* PatchOutput.cpp */; };
 		49a32c9017d805133ec68733043dc964 /* AGC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3f33638670597c231fc3f62c1e9e3a46 /* AGC.m */; };
 		4c223a5ac3b77923c42438f77e6dbe00 /* OV534Driver.m in Sources */ = {isa = PBXBuildFile; fileRef = cf1e9c1085a9a9924e1d8804a93220de /* OV534Driver.m */; };
 		54246e0e70670038e43d95bc16105779 /* Histogram.m in Sources */ = {isa = PBXBuildFile; fileRef = b6de77b62f1e9d2bde3be888e91f8197 /* Histogram.m */; };
@@ -88,60 +83,6 @@
 		2c52c43910e7831daa684ac03009aca5 /* AGC.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AGC.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/AGC.h; sourceTree = SOURCE_ROOT; };
 		2eb74ad8b15d2ae23201a2cf2acc2da6 /* MyCameraDriver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MyCameraDriver.h; path = ../../../addons/ofxMacamPs3Eye/src/macam/include/MyCameraDriver.h; sourceTree = SOURCE_ROOT; };
 		32fa4dc39ad4eded926b01b0cd8d95da /* MyCameraCentral.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = MyCameraCentral.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/MyCameraCentral.m; sourceTree = SOURCE_ROOT; };
-		38396EE517E2FED30099EA50 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		38396EE617E2FED30099EA50 /* ExtendedFXObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendedFXObject.h; sourceTree = "<group>"; };
-		38396EE717E2FED30099EA50 /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
-		38396EE817E2FED30099EA50 /* Patch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patch.h; sourceTree = "<group>"; };
-		38396EEA17E2FED30099EA50 /* Accumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accumulator.h; sourceTree = "<group>"; };
-		38396EEB17E2FED30099EA50 /* AlphaMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaMask.h; sourceTree = "<group>"; };
-		38396EEC17E2FED30099EA50 /* BandFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BandFilter.h; sourceTree = "<group>"; };
-		38396EED17E2FED30099EA50 /* BandPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BandPass.h; sourceTree = "<group>"; };
-		38396EEE17E2FED30099EA50 /* BandThreshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BandThreshold.h; sourceTree = "<group>"; };
-		38396EEF17E2FED30099EA50 /* Base3x3KernelEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base3x3KernelEffect.h; sourceTree = "<group>"; };
-		38396EF017E2FED30099EA50 /* Base5x5KernelEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base5x5KernelEffect.h; sourceTree = "<group>"; };
-		38396EF117E2FED30099EA50 /* Base7x7KernelEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base7x7KernelEffect.h; sourceTree = "<group>"; };
-		38396EF217E2FED30099EA50 /* BaseKernelEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKernelEffect.h; sourceTree = "<group>"; };
-		38396EF317E2FED30099EA50 /* BitwiseAND.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitwiseAND.h; sourceTree = "<group>"; };
-		38396EF417E2FED30099EA50 /* BitwiseOR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitwiseOR.h; sourceTree = "<group>"; };
-		38396EF517E2FED30099EA50 /* BitwiseXOR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitwiseXOR.h; sourceTree = "<group>"; };
-		38396EF617E2FED30099EA50 /* BlurGaussian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurGaussian.h; sourceTree = "<group>"; };
-		38396EF717E2FED30099EA50 /* BlurMedian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurMedian.h; sourceTree = "<group>"; };
-		38396EF817E2FED30099EA50 /* BrightnessContrast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrightnessContrast.h; sourceTree = "<group>"; };
-		38396EF917E2FED30099EA50 /* ChannelBalancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelBalancer.h; sourceTree = "<group>"; };
-		38396EFA17E2FED30099EA50 /* ChannelCombiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelCombiner.h; sourceTree = "<group>"; };
-		38396EFB17E2FED30099EA50 /* ChannelMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelMask.h; sourceTree = "<group>"; };
-		38396EFC17E2FED30099EA50 /* ColorBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorBlock.h; sourceTree = "<group>"; };
-		38396EFD17E2FED30099EA50 /* Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crop.h; sourceTree = "<group>"; };
-		38396EFE17E2FED30099EA50 /* CustomBW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBW.h; sourceTree = "<group>"; };
-		38396EFF17E2FED30099EA50 /* DifferenceAbsolute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifferenceAbsolute.h; sourceTree = "<group>"; };
-		38396F0017E2FED30099EA50 /* DifferenceDarken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifferenceDarken.h; sourceTree = "<group>"; };
-		38396F0117E2FED30099EA50 /* DifferenceLigthen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifferenceLigthen.h; sourceTree = "<group>"; };
-		38396F0217E2FED30099EA50 /* Dilate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dilate.h; sourceTree = "<group>"; };
-		38396F0317E2FED30099EA50 /* EdgeLaplacian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeLaplacian.h; sourceTree = "<group>"; };
-		38396F0417E2FED30099EA50 /* EdgePrewitt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgePrewitt.h; sourceTree = "<group>"; };
-		38396F0517E2FED30099EA50 /* EdgeSobel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeSobel.h; sourceTree = "<group>"; };
-		38396F0617E2FED30099EA50 /* Erode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Erode.h; sourceTree = "<group>"; };
-		38396F0717E2FED30099EA50 /* FixedSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedSource.h; sourceTree = "<group>"; };
-		38396F0817E2FED30099EA50 /* Gamma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamma.h; sourceTree = "<group>"; };
-		38396F0917E2FED30099EA50 /* HayasakaBlend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HayasakaBlend.h; sourceTree = "<group>"; };
-		38396F0A17E2FED30099EA50 /* HSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSL.h; sourceTree = "<group>"; };
-		38396F0B17E2FED30099EA50 /* Invert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invert.h; sourceTree = "<group>"; };
-		38396F0C17E2FED30099EA50 /* OpticalFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpticalFlow.h; sourceTree = "<group>"; };
-		38396F0D17E2FED30099EA50 /* Paintbrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paintbrush.h; sourceTree = "<group>"; };
-		38396F0E17E2FED30099EA50 /* PerspectiveWarp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerspectiveWarp.h; sourceTree = "<group>"; };
-		38396F0F17E2FED30099EA50 /* RGBtoHSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGBtoHSL.h; sourceTree = "<group>"; };
-		38396F1017E2FED30099EA50 /* Sharpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sharpen.h; sourceTree = "<group>"; };
-		38396F1117E2FED30099EA50 /* SphericalDistortion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphericalDistortion.h; sourceTree = "<group>"; };
-		38396F1217E2FED30099EA50 /* TextureTiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureTiler.h; sourceTree = "<group>"; };
-		38396F1317E2FED30099EA50 /* Threshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Threshold.h; sourceTree = "<group>"; };
-		38396F1417E2FED30099EA50 /* PatchInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatchInput.h; sourceTree = "<group>"; };
-		38396F1517E2FED30099EA50 /* PatchOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatchOutput.h; sourceTree = "<group>"; };
-		38396F1717E2FED30099EA50 /* ExtendedFXObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExtendedFXObject.cpp; sourceTree = "<group>"; };
-		38396F1817E2FED30099EA50 /* Manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Manager.cpp; sourceTree = "<group>"; };
-		38396F1917E2FED30099EA50 /* Patch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Patch.cpp; sourceTree = "<group>"; };
-		38396F1A17E2FED30099EA50 /* PatchInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PatchInput.cpp; sourceTree = "<group>"; };
-		38396F1B17E2FED30099EA50 /* PatchOutput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PatchOutput.cpp; sourceTree = "<group>"; };
-		38396F1D17E2FED30099EA50 /* ofxPatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPatches.h; sourceTree = "<group>"; };
 		3cd03abe0301c38c40c1d15deb2f03a2 /* MyCameraInfo.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = MyCameraInfo.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/MyCameraInfo.m; sourceTree = SOURCE_ROOT; };
 		3f33638670597c231fc3f62c1e9e3a46 /* AGC.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = AGC.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/AGC.m; sourceTree = SOURCE_ROOT; };
 		4010a22ab915cb992f1b59bf4cadd039 /* Sensor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = Sensor.m; path = ../../../addons/ofxMacamPs3Eye/src/macam/Sensor.m; sourceTree = SOURCE_ROOT; };
@@ -247,128 +188,9 @@
 			name = ofxMacamPs3Eye;
 			sourceTree = "<group>";
 		};
-		38396ECA17E2FED30099EA50 /* ofxPatches */ = {
-			isa = PBXGroup;
-			children = (
-				38396EE117E2FED30099EA50 /* libs */,
-				38396F1C17E2FED30099EA50 /* src */,
-			);
-			name = ofxPatches;
-			path = ../../ofxPatches;
-			sourceTree = "<group>";
-		};
-		38396EE117E2FED30099EA50 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				38396EE217E2FED30099EA50 /* ofxPatches */,
-			);
-			path = libs;
-			sourceTree = "<group>";
-		};
-		38396EE217E2FED30099EA50 /* ofxPatches */ = {
-			isa = PBXGroup;
-			children = (
-				38396EE317E2FED30099EA50 /* include */,
-				38396F1617E2FED30099EA50 /* src */,
-			);
-			path = ofxPatches;
-			sourceTree = "<group>";
-		};
-		38396EE317E2FED30099EA50 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				38396EE417E2FED30099EA50 /* ofxPatches */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		38396EE417E2FED30099EA50 /* ofxPatches */ = {
-			isa = PBXGroup;
-			children = (
-				38396EE517E2FED30099EA50 /* Constants.h */,
-				38396EE617E2FED30099EA50 /* ExtendedFXObject.h */,
-				38396EE717E2FED30099EA50 /* Manager.h */,
-				38396EE817E2FED30099EA50 /* Patch.h */,
-				38396EE917E2FED30099EA50 /* patches */,
-				38396F1417E2FED30099EA50 /* PatchInput.h */,
-				38396F1517E2FED30099EA50 /* PatchOutput.h */,
-			);
-			path = ofxPatches;
-			sourceTree = "<group>";
-		};
-		38396EE917E2FED30099EA50 /* patches */ = {
-			isa = PBXGroup;
-			children = (
-				38396EEA17E2FED30099EA50 /* Accumulator.h */,
-				38396EEB17E2FED30099EA50 /* AlphaMask.h */,
-				38396EEC17E2FED30099EA50 /* BandFilter.h */,
-				38396EED17E2FED30099EA50 /* BandPass.h */,
-				38396EEE17E2FED30099EA50 /* BandThreshold.h */,
-				38396EEF17E2FED30099EA50 /* Base3x3KernelEffect.h */,
-				38396EF017E2FED30099EA50 /* Base5x5KernelEffect.h */,
-				38396EF117E2FED30099EA50 /* Base7x7KernelEffect.h */,
-				38396EF217E2FED30099EA50 /* BaseKernelEffect.h */,
-				38396EF317E2FED30099EA50 /* BitwiseAND.h */,
-				38396EF417E2FED30099EA50 /* BitwiseOR.h */,
-				38396EF517E2FED30099EA50 /* BitwiseXOR.h */,
-				38396EF617E2FED30099EA50 /* BlurGaussian.h */,
-				38396EF717E2FED30099EA50 /* BlurMedian.h */,
-				38396EF817E2FED30099EA50 /* BrightnessContrast.h */,
-				38396EF917E2FED30099EA50 /* ChannelBalancer.h */,
-				38396EFA17E2FED30099EA50 /* ChannelCombiner.h */,
-				38396EFB17E2FED30099EA50 /* ChannelMask.h */,
-				38396EFC17E2FED30099EA50 /* ColorBlock.h */,
-				38396EFD17E2FED30099EA50 /* Crop.h */,
-				38396EFE17E2FED30099EA50 /* CustomBW.h */,
-				38396EFF17E2FED30099EA50 /* DifferenceAbsolute.h */,
-				38396F0017E2FED30099EA50 /* DifferenceDarken.h */,
-				38396F0117E2FED30099EA50 /* DifferenceLigthen.h */,
-				38396F0217E2FED30099EA50 /* Dilate.h */,
-				38396F0317E2FED30099EA50 /* EdgeLaplacian.h */,
-				38396F0417E2FED30099EA50 /* EdgePrewitt.h */,
-				38396F0517E2FED30099EA50 /* EdgeSobel.h */,
-				38396F0617E2FED30099EA50 /* Erode.h */,
-				38396F0717E2FED30099EA50 /* FixedSource.h */,
-				38396F0817E2FED30099EA50 /* Gamma.h */,
-				38396F0917E2FED30099EA50 /* HayasakaBlend.h */,
-				38396F0A17E2FED30099EA50 /* HSL.h */,
-				38396F0B17E2FED30099EA50 /* Invert.h */,
-				38396F0C17E2FED30099EA50 /* OpticalFlow.h */,
-				38396F0D17E2FED30099EA50 /* Paintbrush.h */,
-				38396F0E17E2FED30099EA50 /* PerspectiveWarp.h */,
-				38396F0F17E2FED30099EA50 /* RGBtoHSL.h */,
-				38396F1017E2FED30099EA50 /* Sharpen.h */,
-				38396F1117E2FED30099EA50 /* SphericalDistortion.h */,
-				38396F1217E2FED30099EA50 /* TextureTiler.h */,
-				38396F1317E2FED30099EA50 /* Threshold.h */,
-			);
-			path = patches;
-			sourceTree = "<group>";
-		};
-		38396F1617E2FED30099EA50 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				38396F1717E2FED30099EA50 /* ExtendedFXObject.cpp */,
-				38396F1817E2FED30099EA50 /* Manager.cpp */,
-				38396F1917E2FED30099EA50 /* Patch.cpp */,
-				38396F1A17E2FED30099EA50 /* PatchInput.cpp */,
-				38396F1B17E2FED30099EA50 /* PatchOutput.cpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		38396F1C17E2FED30099EA50 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				38396F1D17E2FED30099EA50 /* ofxPatches.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				38396ECA17E2FED30099EA50 /* ofxPatches */,
 				13ebfbd5a535d9f601941ac0a4ac6aba /* ofxMacamPs3Eye */,
 			);
 			name = addons;
@@ -512,6 +334,8 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
@@ -588,11 +412,6 @@
 				90965e88edd92e0d10b07fe2f54456d8 /* Sensor.m in Sources */,
 				d181bfbb3780ad7fdfc2bf76815473aa /* ofxMacamPs3Eye.mm in Sources */,
 				3321b96c9659105f44350a6c0a6b0619 /* PS3EyeWindowAppDelegate.m in Sources */,
-				38396F2217E2FED30099EA50 /* ExtendedFXObject.cpp in Sources */,
-				38396F2317E2FED30099EA50 /* Manager.cpp in Sources */,
-				38396F2417E2FED30099EA50 /* Patch.cpp in Sources */,
-				38396F2517E2FED30099EA50 /* PatchInput.cpp in Sources */,
-				38396F2617E2FED30099EA50 /* PatchOutput.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
