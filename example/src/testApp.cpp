@@ -14,12 +14,12 @@ void testApp::setup(){
 	ps3eye.initGrabber(camWidth,camHeight);
 	
 	ps3eye.setAutoGainAndShutter(false); // otherwise we can't set gain or shutter
-	ps3eye.setGain(0.5);
+	ps3eye.setGain(1.0);
 	ps3eye.setShutter(1.0);
-	ps3eye.setGamma(0.5);
+	ps3eye.setGamma(0.4);
 	ps3eye.setBrightness(0.6);
 	ps3eye.setContrast(1.0);
-	ps3eye.setHue(0.0);
+	ps3eye.setHue(0.5);
 	
 	ps3eye.setFlicker(1);
 }

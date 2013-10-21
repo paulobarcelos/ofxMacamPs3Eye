@@ -14,35 +14,43 @@ void testApp::setup(){
 	autoGainAndShutter->addListener(this, &testApp::onAutoGainAndShutterChange);
 	gui.add(autoGainAndShutter);
 	
-	ofxFloatSlider * gain = new ofxFloatSlider("Gain", 0.5, 0.0, 1.0);
+	ofxFloatSlider * gain = new ofxFloatSlider();
+    gain->setup("Gain", 0.5, 0.0, 1.0);
 	gain->addListener(this, &testApp::onGainChange);
 	gui.add(gain);
 	
-	ofxFloatSlider * shutter = new ofxFloatSlider("Shutter", 0.5, 0.0, 1.0);
+	ofxFloatSlider * shutter = new ofxFloatSlider();
+     shutter->setup("Shutter", 0.5, 0.0, 1.0);
 	shutter->addListener(this, &testApp::onShutterChange);
 	gui.add(shutter);
 	
-	ofxFloatSlider * gamma = new ofxFloatSlider("Gamma", 0.5, 0.0, 1.0);
+	ofxFloatSlider * gamma = new ofxFloatSlider();
+     gain->setup("Gamma", 0.5, 0.0, 1.0);
 	gamma->addListener(this, &testApp::onGammaChange);
 	gui.add(gamma);
 	
-	ofxFloatSlider * brightness = new ofxFloatSlider("Brightness", 0.5, 0.0, 1.0);
+	ofxFloatSlider * brightness = new ofxFloatSlider();
+     brightness->setup("Brightness", 0.5, 0.0, 1.0);
 	brightness->addListener(this, &testApp::onBrightnessChange);
 	gui.add(brightness);
 	
-	ofxFloatSlider * contrast = new ofxFloatSlider("Contrast", 0.5, 0.0, 1.0);
+	ofxFloatSlider * contrast = new ofxFloatSlider();
+     contrast->setup("Contrast", 0.5, 0.0, 1.0);
 	contrast->addListener(this, &testApp::onContrastChange);
 	gui.add(contrast);
 	
-	ofxFloatSlider * hue = new ofxFloatSlider("Hue", 0.5, 0.0, 1.0);
+	ofxFloatSlider * hue = new ofxFloatSlider();
+     hue->setup("Hue", 0.5, 0.0, 1.0);
 	hue->addListener(this, &testApp::onHueChange);
 	gui.add(hue);
 	
-	ofxIntSlider * flicker = new ofxIntSlider("Flicker Type", 0, 0, 2);
+	ofxIntSlider * flicker = new ofxIntSlider();
+     flicker->setup("Flicker Type", 0, 0, 2);
 	flicker->addListener(this, &testApp::onFlickerChange);
 	gui.add(flicker);
 	
-	ofxIntSlider * wb = new ofxIntSlider("White Balance Mode", 4, 1, 4);
+	ofxIntSlider * wb = new ofxIntSlider();
+     wb->setup("White Balance Mode", 4, 1, 4);
 	wb->addListener(this, &testApp::onFlickerChange);
 	gui.add(wb);
 	
@@ -51,16 +59,27 @@ void testApp::setup(){
 	gui.add(led);
 	
 	// Load initial values
-	onAutoGainAndShutterChange(gui.getToggle("Auto Gain & Shutter"));
-	onGainChange(gui.getFloatSlider("Gain"));
-	onShutterChange(gui.getFloatSlider("Shutter"));
-	onGammaChange(gui.getFloatSlider("Gamma"));
-	onBrightnessChange(gui.getFloatSlider("Brightness"));
-	onContrastChange(gui.getFloatSlider("Contrast"));
-	onHueChange(gui.getFloatSlider("Hue"));
-	onLedChange(gui.getToggle("LED"));
-	onFlickerChange(gui.getIntSlider("Flicker"));
-	onWhiteBalanceChange(gui.getIntSlider("White Balance"));
+    
+    bool b = gui.getToggle("Auto Gain & Shutter");
+	onAutoGainAndShutterChange(b);
+    float f = gui.getFloatSlider("Gain");
+	onGainChange(f);
+    f = gui.getFloatSlider("Shutter");
+	onShutterChange(f);
+    f = gui.getFloatSlider("Gamma");
+	onGammaChange(f);
+    f = gui.getFloatSlider("Brightness");
+	onBrightnessChange(f);
+    f = gui.getFloatSlider("Contrast");
+	onContrastChange(f);
+    f = gui.getFloatSlider("Hue");
+	onHueChange(f);
+    b = gui.getToggle("LED");
+	onLedChange(b);
+    int i  = gui.getIntSlider("Flicker");
+	onFlickerChange(i);
+    i = gui.getIntSlider("White Balance");
+	onWhiteBalanceChange(i);
 	
 	
 }

@@ -15,7 +15,7 @@ public:
 	ofxMacamPs3Eye();
 	~ofxMacamPs3Eye();
 	
-	void listDevices(){getDeviceList(true);};	
+	vector<ofVideoDevice> listDevices(){getDeviceList(true); vector<ofVideoDevice> t; return t;};
 	static vector<ofxMacamPs3EyeDeviceInfo*> getDeviceList(bool verbose = false);
 	bool initGrabber(int w, int h){ return initGrabber(w, h, true); };
 	bool initGrabber(int w, int h, bool defaultSettingsHack); // Read on the implementation what this hack is about...
