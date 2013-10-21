@@ -74,5 +74,6 @@ You can also control the frame-rate and resolution, but for those it's maybe bet
 The big credits of this addon should go for everyone who collaborated in the [Macam](http://http://webcam-osx.sourceforge.net/) project for this camera to actually work on a mac. But the idea of using the source of Macam itself (and not the quicktime component) in a addon is by Jason Van Cleave, who made [PS3EyeWindow](https://github.com/jvcleave/PS3EyeWindow). Credits also to Kyle McDonald and [his fork of the PS3EyeWindow](https://github.com/kylemcdonald/PS3EyeWindow) where I saw the idea of using a delegate to interface with the driver and camera central. I've basically just copied and pasted most of that code, gave it a lot of love to allow multiple cameras to work and shaped it as a proper ofxAddon.	
 
 ##Change log
+- v2.2.0 - Upgraded ````listDevices```` that now returns a vector of ofVideoDevice (thanks @jmwohl) 
 - v2.1.0 - Removed osx 10.6 SDK dependencies
  

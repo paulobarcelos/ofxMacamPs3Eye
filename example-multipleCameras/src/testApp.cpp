@@ -6,7 +6,7 @@ void testApp::setup(){
 	
 	ofSetLogLevel(OF_LOG_VERBOSE);	
 	
-	vector<ofxMacamPs3EyeDeviceInfo*> deviceList = ofxMacamPs3Eye::getDeviceList();
+	vector<ofxMacamPs3EyeDeviceInfo*> deviceList = ofxMacamPs3Eye::getDeviceInfoList();
 	
 	for (int i = 0; i < deviceList.size(); i++) {
 		ofxMacamPs3Eye * camera = new ofxMacamPs3Eye();

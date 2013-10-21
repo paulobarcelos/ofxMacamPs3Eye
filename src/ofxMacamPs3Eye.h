@@ -15,9 +15,8 @@ public:
 	ofxMacamPs3Eye();
 	~ofxMacamPs3Eye();
 	
-	// Updated to match virtual method signature
 	vector<ofVideoDevice> listDevices();
-	static vector<ofxMacamPs3EyeDeviceInfo*> getDeviceList(bool verbose = false);
+	static vector<ofxMacamPs3EyeDeviceInfo*> getDeviceInfoList(bool verbose = false);
 	bool initGrabber(int w, int h){ return initGrabber(w, h, true); };
 	bool initGrabber(int w, int h, bool defaultSettingsHack); // Read on the implementation what this hack is about...
 	void update();
