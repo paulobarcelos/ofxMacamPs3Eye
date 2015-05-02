@@ -10,7 +10,7 @@ struct ofxMacamPs3EyeDeviceInfo{
 	char name[255];
 };
 
-class ofxMacamPs3Eye : public ofBaseVideoGrabber, public ofBaseVideoDraws {
+class ofxMacamPs3Eye {
 public:
 	ofxMacamPs3Eye();
 	~ofxMacamPs3Eye();
@@ -19,8 +19,8 @@ public:
 	static vector<ofxMacamPs3EyeDeviceInfo*> getDeviceInfoList(bool verbose = false);
 	bool initGrabber(int w, int h){ return initGrabber(w, h, true); };
 	bool initGrabber(int w, int h, bool defaultSettingsHack); // Read on the implementation what this hack is about...
-	void update();
-	bool isFrameNew();
+    void update();
+    bool isFrameNew();
 	
 	void setDeviceID(int _deviceID);
 	void setDesiredFrameRate(int framerate);
@@ -31,15 +31,15 @@ public:
     void videoSettings();
     void setVerbose(bool bTalkToMe);
 	
-	float getRealFrameRate();
+    float getRealFrameRate();
 	
-	unsigned char * getPixels();
+    ofPixels_<unsigned char> & getPixels(){};
 	ofPixels & getPixelsRef();
 	
-	void close();	
+    void close();
 	
-	float getHeight();
-	float getWidth();
+    float getHeight();
+    float getWidth();
 	
 	void draw(float x, float y, float w, float h);
 	void draw(float x, float y){
@@ -57,7 +57,7 @@ public:
 	
 	void setAnchorPercent(float xPct, float yPct);
 	void setAnchorPoint(float x, float y);
-	void resetAnchor();
+    void resetAnchor();
 	
 	ofTexture & getTextureReference();
 	void setUseTexture(bool bUseTex);
@@ -88,6 +88,14 @@ public:
 	int getFlicker();
 	int getWhiteBalance();
 
+    
+    //////
+    bool setup(int w, int h) {;};
+    ofTexture * getTexturePtr(){ return NULL; }
+
+    vector<ofTexture> & getTexturePlanes(){;};
+    
+    
 protected:
 	int deviceID;
 	int desiredFPS;
@@ -105,5 +113,6 @@ protected:
 	ofPixels pixels;
 	
 	void exit(ofEventArgs & args){close();};
-		
+    
+ 
 };
