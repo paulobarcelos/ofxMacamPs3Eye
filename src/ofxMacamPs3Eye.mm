@@ -138,9 +138,10 @@ bool ofxMacamPs3Eye::isFrameNew(){
 	return frameIsNew;
 }
 
-unsigned char * ofxMacamPs3Eye::getPixels(){
+/*unsigned char * ofxMacamPs3Eye::getPixels(){
 	return pixels.getPixels();
-}
+}*/
+
 ofPixels & ofxMacamPs3Eye::getPixelsRef(){
 	return pixels;
 }
